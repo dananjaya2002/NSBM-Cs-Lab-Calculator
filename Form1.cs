@@ -70,7 +70,14 @@ namespace calculator
                         result = op1 * op2;
                         break;
                     case "/":
-                        result = op1 / op2;
+                        try
+                        {
+                            result = op1 / op2;
+                        }
+                        catch (DivideByZeroException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                         break;
                 }
                 displaytxt.Text = result.ToString();
