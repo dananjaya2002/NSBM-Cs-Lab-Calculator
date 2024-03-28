@@ -70,15 +70,7 @@ namespace calculator
                         result = op1 * op2;
                         break;
                     case "/":
-                        if (op2 != 0)
-                        {
-                            result = op1 / op2;
-                        }
-                        else
-                        {
-                            op1 = double.NaN; op2 = double.NaN;
-                            operation = string.Empty;
-                        }
+                        result = op1 / op2;
                         break;
                 }
                 displaytxt.Text = result.ToString();
